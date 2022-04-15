@@ -1,0 +1,99 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;}
+
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 3rem;
+        font-weight: bold;
+        color: aliceblue;
+    }
+.contener{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 4fr 1fr;
+    grid-template-areas: 
+            "header"
+            "nav"
+            "section"
+            "footer";
+}
+
+    
+    header{
+        background-color: black;
+        grid-area: header;
+    }
+    nav{
+        background-color: yellowgreen;
+        grid-area: nav;
+    }
+    section{
+        grid-area: section;
+        padding: 20px;
+        background-color: aqua;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "article"
+        "aside1"
+        "aside2"
+        "aside3";
+    }
+    article{
+        background-color: chocolate;
+        grid-area: article;
+        margin-top: 10px;
+    }
+    aside{
+        background-color: blue;
+        margin-top: 10px;
+        grid-area: aside1 aside2 aside3;
+    }
+    footer{
+        grid-area: footer;
+        background-color: cadetblue;
+    }
+    .flextexte{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @media screen and (min-width: 600px) and (max-width: 1023px){
+        .contener{
+            grid-template-columns: 1fr 4fr;
+            grid-template-rows: 1fr 4fr 1fr;
+            grid-template-areas: 
+                    "header header"
+                    "nav section"
+                    "footer footer";}
+        
+    }
+    @media screen and (min-width: 1024px) {
+        .contener{
+            grid-template-columns: 1fr 4fr;
+            grid-template-rows: 1fr 4fr 1fr;
+            grid-template-areas: 
+                    "header header"
+                    "nav section"
+                    "footer footer";}
+
+        section{
+        grid-area: section;
+        padding: 20px;
+        background-color: aqua;
+        display: grid;
+        grid-template-columns: 4fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "article aside1"
+        "article aside2"
+        "article aside3"}
+        article{
+
+            margin-right: 10px;}
+    }
