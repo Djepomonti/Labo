@@ -1,0 +1,56 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;}
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 2rem;
+        font-weight: bold;
+        color: aliceblue;
+    }
+
+header{
+    background-color: coral;
+    grid-area: header;
+    margin: 0 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+
+}
+.blocSide{
+    background-color: blueviolet;
+    grid-area: blocSide;
+    margin: 0 15px;
+}
+section{
+    background-color: darkcyan;
+    margin: 0 15px;
+    margin-top: 15px;
+
+}
+.section1{
+    grid-area: section1;
+}
+.section1{
+    grid-area: section2;
+}
+.section1{
+    grid-area: section3;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contener{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+            "header header header"
+            "blocSide blocSide blocSide"
+            "section1 section2 section3";
+}
