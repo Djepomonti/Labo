@@ -1,0 +1,60 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    background-color: darkslategrey;
+}
+
+figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card1 {
+    position: relative;
+    width: 300px;
+    grid-area: card1;
+}
+
+.card2 {
+    position: relative;
+    width: 300px;
+    grid-area: card2;
+}
+
+.card3 {
+    position: relative;
+    width: 300px;
+    grid-area: card3;
+}
+
+.card4 {
+    position: relative;
+    width: 300px;
+    grid-area: card4;
+}
+
+i {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 70px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "card1 card2"
+        "card3 card4";
+}
