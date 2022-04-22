@@ -1,0 +1,8 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;}
+    .test{
+        width: max-content;
+        background-color: rgb(17, 102, 102);
+    }
