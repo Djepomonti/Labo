@@ -1,0 +1,117 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: honeydew;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.nav-container {
+    width: 100vh;
+    height: 40px;
+    background-color: darkorchid;
+
+
+}
+
+.nav-container ul {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+
+}
+
+.nav-container li {
+    list-style: none;
+    justify-content: center;
+    text-align: center;
+    font-size: 24px;
+    padding: 5px 15px 0px 15px;
+}
+
+.nav-container a {
+    text-decoration: none;
+    color: aliceblue;
+
+}
+
+.banner-container {
+    display: flex;
+    width: 100vh;
+    height: 320px;
+    background-color: darkcyan;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.banner-container h2 {
+
+
+    font-size: 70px;
+    color: aliceblue;
+    padding-top: 90px;
+
+}
+
+h2 {
+    position: relative;
+}
+
+h2:before {
+    content: "";
+    position: absolute;
+
+    width: 350px;
+    height: 8px;
+    background-color: aliceblue;
+    z-index: 1;
+    margin-top: 70px;
+}
+
+.card-container {
+    display: flex;
+    background-color: bisque;
+    width: 100vh;
+    justify-content: center;
+}
+
+ul {
+    list-style: none;
+}
+
+.card1,
+.card2,
+.card3 {
+    background-color: rgb(211, 141, 36);
+    width: 140px;
+    text-align: center;
+    border-radius: 20px;
+    margin: 10px;
+
+}
+
+.formule {
+    background-color: azure;
+    font-size: 24px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.prix {
+    background-color: chartreuse;
+    font-size: 24px;
+
+    padding-top: 5px;
+    padding-bottom: 10px;
+
+}
