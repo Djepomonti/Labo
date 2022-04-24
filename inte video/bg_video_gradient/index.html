@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <!-- NAVIGATION -->
+        <button id="icon-nav"><img src="media/menu-button.svg" alt=""></button>
+        <nav id="nav">
+            <a href="#">Accueil</a>
+            <a href="#">Portfolio</a>
+            <a href="#">A propos</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact</a>
+        </nav>
+
+
+        <!-- VIDEO -->
+        <video id="video" autoplay muted poster="media/background.jpg">
+            <source src="media/concert.mp4" type="video/mp4">
+        </video>
+
+
+        <!-- CONTENU -->
+        <div id="header-content">
+            <h1>Background video<br><span class="subtitle">Intégrer des vidéos en arrière-plan !</span></h1>
+            <a href="#">en savoir plus</a>
+        </div>
+
+
+        <!-- BOUTON -->
+        <button id="btn"><img src="media/play_pause.svg" alt=""></button>
+
+
+    </header>
+
+
+    <section class="container">
+        <h2>Liens utiles :</h2>
+        <ul>
+            <li><a href="https://videos.pexels.com/" target="_blank">Pexels Videos</a></li>
+            <li><a href="https://pixabay.com/en/videos/" target="_blank">Pixabay Videos</a></li>
+            <li><a href="http://caniuse.com/" target="_blank">Can I Use</a></li>
+            <li><a href="https://handbrake.fr/" target="_blank">HandBrake</a> (logiciel gratuit multiplateformes)</li>
+            <li><a href="http://www.online-convert.com/fr" target="_blank">Online Convert</a> (Service de conversion en ligne gratuit)</li>
+            <li><a href="http://www.colorzilla.com/gradient-editor/" target="_blank">ColorZilla</a> (Gradient Generator)</li>
+            <li><a href="http://css3generator.com/" target="_blank">CSS3 Generator</a></li>
+            <li><a href="http://www.flaticon.com/" target="_blank">Flaticon</a></li>
+        </ul>
+    </section>
+
+
+    <script>
+        var btn = document.getElementById('btn');
+        var video = document.getElementById('video');
+
+        btn.addEventListener('click', function () {
+            if (video.paused) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        })
+        
+        
+        var iterations = 1;
+        
+        video.addEventListener('ended', function(){
+            if( iterations < 5 ){
+                this.currentTime = 0;
+                this.play();
+                iterations++;
+            }
+        })
+        
+        
+        
+        var iconNav = document.getElementById('icon-nav');
+        var nav = document.getElementById('nav');
+        
+        iconNav.addEventListener('click', function(){
+            nav.classList.toggle('expand');
+        })
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
