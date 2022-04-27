@@ -1,0 +1,28 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;}
+
+
+    .box{
+        width: 100vh;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+        border-radius: 50px;
+        width: 150px;
+    color: aliceblue; 
+ }
+
+ .couleur{
+     background-color: blue;
+ }
